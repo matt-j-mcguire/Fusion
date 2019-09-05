@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9476B45D-08C2-4B0C-954D-9CD388C88BB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Fusion.My.MyApplication</StartupObject>
+    <RootNamespace>Fusion</RootNamespace>
+    <AssemblyName>Fusion</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Fusion.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Fusion.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>Off</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Fusion.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Fusion.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Fusion.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42032,42036</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing.Drawing2D" />
+    <Import Include="System.Drawing.Imaging" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="System.Drawing.Text" />
+    <Import Include="System.Globalization" />
+    <Import Include="System.IO" />
+    <Import Include="System.IO.Ports" />
+    <Import Include="System.Net" />
+    <Import Include="System.Net.Sockets" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base Items\Base Types.vb" />
+    <Compile Include="Base Items\BaseItemProp.Designer.vb">
+      <DependentUpon>BaseItemProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Base Items\BaseItemProp.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base Items\ItemSettings.Designer.vb">
+      <DependentUpon>ItemSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Base Items\ItemSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base Items\Page_Props.Designer.vb">
+      <DependentUpon>Page_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Base Items\Page_Props.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base Items\Page.vb" />
+    <Compile Include="Base Items\Project.vb" />
+    <Compile Include="Base Items\Project_Props.Designer.vb">
+      <DependentUpon>Project_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Base Items\Project_Props.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base Items\Block_UI.vb" />
+    <Compile Include="Base Items\WireColor.vb" />
+    <Compile Include="Base Items\Wire_UI.vb" />
+    <Compile Include="Base Items\Wire_UI_Props.Designer.vb">
+      <DependentUpon>Wire_UI_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Base Items\Wire_UI_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_TruthTable_Props.Designer.vb">
+      <DependentUpon>B_TruthTable_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_TruthTable_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_WetBulb_Props.Designer.vb">
+      <DependentUpon>B_WetBulb_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_WetBulb_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Timer_Props.Designer.vb">
+      <DependentUpon>B_Timer_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Timer_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_timedSequence_Interval.Designer.vb">
+      <DependentUpon>B_timedSequence_Interval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_timedSequence_Interval.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_TimedSequence_Props.Designer.vb">
+      <DependentUpon>B_TimedSequence_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_TimedSequence_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_TemperatureProbe_Props.Designer.vb">
+      <DependentUpon>B_TemperatureProbe_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_TemperatureProbe_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_SettingTimeScheduleTimeAdd.Designer.vb">
+      <DependentUpon>B_SettingTimeScheduleTimeAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_SettingTimeScheduleTimeAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_SettingTimeSchedule_Props.Designer.vb">
+      <DependentUpon>B_SettingTimeSchedule_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_SettingTimeSchedule_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_SettingCommand_Props.Designer.vb">
+      <DependentUpon>B_SettingCommand_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_SettingCommand_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_SettingDigital_Props.Designer.vb">
+      <DependentUpon>B_SettingDigital_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_SettingDigital_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_SettingAnalog_Props.Designer.vb">
+      <DependentUpon>B_SettingAnalog_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_SettingAnalog_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_SetReset_Props.Designer.vb">
+      <DependentUpon>B_SetReset_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_SetReset_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Scale_Props.Designer.vb">
+      <DependentUpon>B_Scale_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Scale_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Relay_Props.Designer.vb">
+      <DependentUpon>B_Relay_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Relay_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Random_Props.Designer.vb">
+      <DependentUpon>B_Random_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Random_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Ramp_Props.Designer.vb">
+      <DependentUpon>B_Ramp_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Ramp_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_PID_Props.Designer.vb">
+      <DependentUpon>B_PID_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_PID_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Modulo_Props.Designer.vb">
+      <DependentUpon>B_Modulo_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Modulo_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Label_Props.Designer.vb">
+      <DependentUpon>B_Label_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Label_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_JumpTo_Props.Designer.vb">
+      <DependentUpon>B_JumpTo_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_JumpTo_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_JumpFrom_Props.Designer.vb">
+      <DependentUpon>B_JumpFrom_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_JumpFrom_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_AddSubtract_Props.Designer.vb">
+      <DependentUpon>B_AddSubtract_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_AddSubtract_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_BitShift_Props.Designer.vb">
+      <DependentUpon>B_BitShift_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_BitShift_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_AlarmManager_Prop.Designer.vb">
+      <DependentUpon>B_AlarmManager_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_AlarmManager_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Alarm_Prop.Designer.vb">
+      <DependentUpon>B_Alarm_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Alarm_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_AddSubtract.vb" />
+    <Compile Include="Block Types\B_Alarm.vb" />
+    <Compile Include="Block Types\B_AlarmManager.vb" />
+    <Compile Include="Block Types\B_AnalogInput.vb" />
+    <Compile Include="Block Types\B_AnalogOutput.vb" />
+    <Compile Include="Block Types\B_AnalogToBinary.vb" />
+    <Compile Include="Block Types\B_And.vb" />
+    <Compile Include="Block Types\B_Average.vb" />
+    <Compile Include="Block Types\B_BinaryToAnalog.vb" />
+    <Compile Include="Block Types\B_BitShift.vb" />
+    <Compile Include="Block Types\B_Cam.vb" />
+    <Compile Include="Block Types\B_CompareDigital.vb" />
+    <Compile Include="Block Types\B_ConstantDigital.vb" />
+    <Compile Include="Block Types\B_Counter_Props.Designer.vb">
+      <DependentUpon>B_Counter_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Counter_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_DigitalInput.vb" />
+    <Compile Include="Block Types\B_DigitalOutput.vb" />
+    <Compile Include="Block Types\B_Exnor.vb" />
+    <Compile Include="Block Types\B_Exor.vb" />
+    <Compile Include="Block Types\B_JumpFrom.vb" />
+    <Compile Include="Block Types\B_JumpTo.vb" />
+    <Compile Include="Block Types\B_Label.vb" />
+    <Compile Include="Block Types\B_Modulo.vb" />
+    <Compile Include="Block Types\B_MultiDiv.vb" />
+    <Compile Include="Block Types\B_MultiDiv_Props.Designer.vb">
+      <DependentUpon>B_MultiDiv_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_MultiDiv_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Nand.vb" />
+    <Compile Include="Block Types\B_Nor.vb" />
+    <Compile Include="Block Types\B_Not.vb" />
+    <Compile Include="Block Types\B_Or.vb" />
+    <Compile Include="Block Types\B_Ramp.vb" />
+    <Compile Include="Block Types\B_Random.vb" />
+    <Compile Include="Block Types\B_Relay.vb" />
+    <Compile Include="Block Types\B_Scale.vb" />
+    <Compile Include="Block Types\B_SetReset.vb" />
+    <Compile Include="Block Types\B_SettingAnalog.vb" />
+    <Compile Include="Block Types\B_SettingCommand.vb" />
+    <Compile Include="Block Types\B_SettingDigital.vb" />
+    <Compile Include="Block Types\B_SettingTimeSchedule.vb" />
+    <Compile Include="Block Types\B_Switch.vb" />
+    <Compile Include="Block Types\B_TemperatureProbe.vb" />
+    <Compile Include="Block Types\B_TimedSequence.vb" />
+    <Compile Include="Block Types\B_Timer.vb" />
+    <Compile Include="Block Types\B_TruthTable.vb" />
+    <Compile Include="Block Types\B_CompareAnalog.vb" />
+    <Compile Include="Block Types\B_ConstantAnalog.vb" />
+    <Compile Include="Block Types\B_Counter.vb" />
+    <Compile Include="Block Types\B_PID.vb" />
+    <Compile Include="Block Types\B_WetBulb.vb" />
+    <Compile Include="Block Types\B_AnalogInput_Prop.Designer.vb">
+      <DependentUpon>B_AnalogInput_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_AnalogInput_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_AnalogOutput_Prop.Designer.vb">
+      <DependentUpon>B_AnalogOutput_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_AnalogOutput_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_AnalogToBinary_Props.Designer.vb">
+      <DependentUpon>B_AnalogToBinary_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_AnalogToBinary_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_And_Props.Designer.vb">
+      <DependentUpon>B_And_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_And_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Average_Props.Designer.vb">
+      <DependentUpon>B_Average_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Average_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_BinaryToAnalog_Props.Designer.vb">
+      <DependentUpon>B_BinaryToAnalog_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_BinaryToAnalog_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Cam_Prop.Designer.vb">
+      <DependentUpon>B_Cam_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Cam_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_CompareAnalog_Props.Designer.vb">
+      <DependentUpon>B_CompareAnalog_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_CompareAnalog_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_CompareDigital_Props.Designer.vb">
+      <DependentUpon>B_CompareDigital_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_CompareDigital_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_ConstantAnalog_Prop.Designer.vb">
+      <DependentUpon>B_ConstantAnalog_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_ConstantAnalog_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_ConstantDigital_Prop.Designer.vb">
+      <DependentUpon>B_ConstantDigital_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_ConstantDigital_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_DigitalInput_Prop.Designer.vb">
+      <DependentUpon>B_DigitalInput_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_DigitalInput_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_DigitalOutput_Prop.Designer.vb">
+      <DependentUpon>B_DigitalOutput_Prop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_DigitalOutput_Prop.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Exnor_Props.Designer.vb">
+      <DependentUpon>B_Exnor_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Exnor_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Exor_Props.Designer.vb">
+      <DependentUpon>B_Exor_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Exor_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Nand_Props.Designer.vb">
+      <DependentUpon>B_Nand_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Nand_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Nor_Props.Designer.vb">
+      <DependentUpon>B_Nor_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Nor_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Not_Props.Designer.vb">
+      <DependentUpon>B_Not_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Not_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Or_Props.Designer.vb">
+      <DependentUpon>B_Or_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Or_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block Types\B_Switch_Props.Designer.vb">
+      <DependentUpon>B_Switch_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Block Types\B_Switch_Props.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangePageSize.Designer.vb">
+      <DependentUpon>ChangePageSize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePageSize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Globals.vb" />
+    <Compile Include="Base Items\Block.vb" />
+    <Compile Include="Base Items\Connector.vb" />
+    <Compile Include="Base Items\Wire.vb" />
+    <Compile Include="Helpers\BitArrs.vb" />
+    <Compile Include="Helpers\BLTs.vb" />
+    <Compile Include="Helpers\CommonDrawing.vb" />
+    <Compile Include="Helpers\ErrorLogger.vb" />
+    <Compile Include="Helpers\EventLogger.vb" />
+    <Compile Include="Helpers\HSLConvert.vb" />
+    <Compile Include="Helpers\windowHelp.vb" />
+    <Compile Include="Helpers\XHelper.vb" />
+    <Compile Include="IO\CommLoop.vb" />
+    <Compile Include="IO\CommPoint.vb" />
+    <Compile Include="IO\IOManager.vb" />
+    <Compile Include="IO\IOPoint.vb" />
+    <Compile Include="IO\OptoMux\CommLoop_OptoMux.vb" />
+    <Compile Include="IO\OptoMux\CommLoop_OptoMux_Props.Designer.vb">
+      <DependentUpon>CommLoop_OptoMux_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IO\OptoMux\CommLoop_OptoMux_Props.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IO\OptoMux\Driver\Opto Driver.vb" />
+    <Compile Include="IO\OptoMux\Driver\Opto IP.vb" />
+    <Compile Include="IO\OptoMux\Driver\Opto Serial.vb" />
+    <Compile Include="IO\OptoMux\Driver\Opto Support.vb" />
+    <Compile Include="IO\OptoMux\OptoMuxBoard.vb" />
+    <Compile Include="IO\OptoMux\OptoMuxBoard_Props.Designer.vb">
+      <DependentUpon>OptoMuxBoard_Props.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IO\OptoMux\OptoMuxBoard_Props.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageDesigner.Designer.vb">
+      <DependentUpon>PageDesigner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PageDesigner.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base Items\BaseItemProp.resx">
+      <DependentUpon>BaseItemProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base Items\ItemSettings.resx">
+      <DependentUpon>ItemSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base Items\Page_Props.resx">
+      <DependentUpon>Page_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base Items\Project_Props.resx">
+      <DependentUpon>Project_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base Items\Wire_UI_Props.resx">
+      <DependentUpon>Wire_UI_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_TruthTable_Props.resx">
+      <DependentUpon>B_TruthTable_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_WetBulb_Props.resx">
+      <DependentUpon>B_WetBulb_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Timer_Props.resx">
+      <DependentUpon>B_Timer_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_timedSequence_Interval.resx">
+      <DependentUpon>B_timedSequence_Interval.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_TimedSequence_Props.resx">
+      <DependentUpon>B_TimedSequence_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_TemperatureProbe_Props.resx">
+      <DependentUpon>B_TemperatureProbe_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_SettingTimeScheduleTimeAdd.resx">
+      <DependentUpon>B_SettingTimeScheduleTimeAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_SettingTimeSchedule_Props.resx">
+      <DependentUpon>B_SettingTimeSchedule_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_SettingCommand_Props.resx">
+      <DependentUpon>B_SettingCommand_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_SettingDigital_Props.resx">
+      <DependentUpon>B_SettingDigital_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_SettingAnalog_Props.resx">
+      <DependentUpon>B_SettingAnalog_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_SetReset_Props.resx">
+      <DependentUpon>B_SetReset_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Scale_Props.resx">
+      <DependentUpon>B_Scale_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Relay_Props.resx">
+      <DependentUpon>B_Relay_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Random_Props.resx">
+      <DependentUpon>B_Random_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Ramp_Props.resx">
+      <DependentUpon>B_Ramp_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_PID_Props.resx">
+      <DependentUpon>B_PID_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Modulo_Props.resx">
+      <DependentUpon>B_Modulo_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Label_Props.resx">
+      <DependentUpon>B_Label_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_JumpTo_Props.resx">
+      <DependentUpon>B_JumpTo_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_JumpFrom_Props.resx">
+      <DependentUpon>B_JumpFrom_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_AddSubtract_Props.resx">
+      <DependentUpon>B_AddSubtract_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_BitShift_Props.resx">
+      <DependentUpon>B_BitShift_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_AlarmManager_Prop.resx">
+      <DependentUpon>B_AlarmManager_Prop.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Alarm_Prop.resx">
+      <DependentUpon>B_Alarm_Prop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_AnalogInput_Prop.resx">
+      <DependentUpon>B_AnalogInput_Prop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_AnalogOutput_Prop.resx">
+      <DependentUpon>B_AnalogOutput_Prop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_AnalogToBinary_Props.resx">
+      <DependentUpon>B_AnalogToBinary_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_And_Props.resx">
+      <DependentUpon>B_And_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Average_Props.resx">
+      <DependentUpon>B_Average_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_BinaryToAnalog_Props.resx">
+      <DependentUpon>B_BinaryToAnalog_Props.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Cam_Prop.resx">
+      <DependentUpon>B_Cam_Prop.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_CompareAnalog_Props.resx">
+      <DependentUpon>B_CompareAnalog_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_CompareDigital_Props.resx">
+      <DependentUpon>B_CompareDigital_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_ConstantAnalog_Prop.resx">
+      <DependentUpon>B_ConstantAnalog_Prop.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_ConstantDigital_Prop.resx">
+      <DependentUpon>B_ConstantDigital_Prop.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Counter_Props.resx">
+      <DependentUpon>B_Counter_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_DigitalInput_Prop.resx">
+      <DependentUpon>B_DigitalInput_Prop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_DigitalOutput_Prop.resx">
+      <DependentUpon>B_DigitalOutput_Prop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Exnor_Props.resx">
+      <DependentUpon>B_Exnor_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Exor_Props.resx">
+      <DependentUpon>B_Exor_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_MultiDiv_Props.resx">
+      <DependentUpon>B_MultiDiv_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Nand_Props.resx">
+      <DependentUpon>B_Nand_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Nor_Props.resx">
+      <DependentUpon>B_Nor_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Not_Props.resx">
+      <DependentUpon>B_Not_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Or_Props.resx">
+      <DependentUpon>B_Or_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block Types\B_Switch_Props.resx">
+      <DependentUpon>B_Switch_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePageSize.resx">
+      <DependentUpon>ChangePageSize.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IO\OptoMux\CommLoop_OptoMux_Props.resx">
+      <DependentUpon>CommLoop_OptoMux_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IO\OptoMux\OptoMuxBoard_Props.resx">
+      <DependentUpon>OptoMuxBoard_Props.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageDesigner.resx">
+      <DependentUpon>PageDesigner.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fusion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IO\IO Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_brick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cog2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Blue Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Blue Righ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brick_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fusion 16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Page Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CommPoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CutHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PasteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TagBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_addsub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_AlarmMaster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_AnalogInput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_AnalogOutput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_AnalogToBinary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_And.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_average.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_binaryToAnalog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Bitshift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B_cam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_compareAn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_compareDig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_conAn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_conDig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_counter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_DigitalInput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_DigitalOutput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Exnor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Exor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_jumpFrom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_jumpTo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_modulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_multiDiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_nand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Not.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Or.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_pid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_ramp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_random.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_relay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_setReset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_settingAnalog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_settingCommand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_settingDigital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_settingTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_temperature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_timedsequence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_truthtable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b_Wetbulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_Dashes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_DashdotDash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_Dashdotdot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_Dots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_Lime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_medBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_MedGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_brown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_drkBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_drkGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_lightBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c_LightGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignToGridHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Green All Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Green All In.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Connect.cur" />
+    <EmbeddedResource Include="Resources\NoConnect.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\LineDrag.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showOutput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showInput.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

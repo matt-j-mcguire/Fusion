@@ -1,0 +1,17 @@
+﻿
+Connection strings will be in the format: 
+Driver.CommPoint-IOpoint = OptoMux.101-1
+
+
+Standard prefixes for possible future
+---------------------------
+OptoMux			Standard DK Opto Driver
+ArduinoMegaDK	specially designed driver to work with a DK designed software on a Arduino Mega
+Modbus			Standard Modbus driver
+MilleniumDKxx	specially designed driver to work with Millenium with a special program loaded
+
+connection format standards
+--------------------------------------
+Prefixes: may contain letters or numbers no symbols [a-z,A-Z,0-9]
+Identifier: may contain letters or numbers no symbols [a-z,A-Z,0-9]
+Point: may contain letters or numbers no symbols [a-z,A-Z,0-9]
